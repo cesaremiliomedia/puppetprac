@@ -16,4 +16,29 @@ const puppeteer = require("puppeteer");
   "/html/body/div[3]/main/div/div/form/footer/div/div/input[2]"
  );
  await click3[0].click();
+ await page.waitForTimeout(3000);
+ await page.type('input[name="checkout[email]"]', "Cecssastro10@yahoo.com", {
+  delay: 0,
+ });
+ await page.type(
+  'input[name="checkout[shipping_address][first_name]"]',
+  "Cesaaaf",
+  {
+   delay: 10,
+  }
+ );
+ await page.type(
+  'input[name="checkout[shipping_address][last_name]"]',
+  "CASTTT",
+  {
+   delay: 10,
+  }
+ );
+ await page.type(
+  'input[name="checkout[shipping_address][address1]"]',
+  "1000 poop street",
+  {
+   delay: 10,
+  }
+ );
 })();
